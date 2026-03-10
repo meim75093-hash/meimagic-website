@@ -1,0 +1,405 @@
+/* MeiMagic - 响应式优化样式 */
+/* Responsive Design Additions */
+
+/* 基础响应式 */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: clamp(0.9375rem, 0.2vw + 0.875rem, 1.0625rem);
+  line-height: 1.7;
+}
+
+/* 图片响应式 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 容器 */
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* 触摸区域最小 44px */
+.btn,
+.nav-links a,
+.mobile-menu-btn,
+.lang-toggle,
+.lang-dropdown button,
+.form-input,
+.social-link,
+.faq-question {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 字体响应式 */
+.hero-title {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}
+
+/* 间距响应式 */
+.hero {
+  padding: clamp(80px, 15vw, 120px) 20px 60px;
+}
+
+.products,
+.features,
+.testimonials,
+.faq,
+.newsletter {
+  padding: clamp(60px, 10vw, 100px) 20px;
+}
+
+/* 网格响应式 */
+.products-grid,
+.features-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+}
+
+/* ========== 平板 (1024px) ========== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+}
+
+/* ========== 手机横屏/小平板 (768px) ========== */
+@media (max-width: 768px) {
+  /* 导航栏 */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 100px 16px 60px;
+    min-height: auto;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  /* 网格单列 */
+  .products-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    padding: 20px;
+  }
+
+  /* 页脚 */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+
+  /* 表单 */
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  /* FAQ */
+  .faq-question {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .faq-answer p {
+    padding: 0 15px 15px;
+  }
+
+  /* 移动端底部固定栏 */
+  .mobile-fixed-bar {
+    display: block;
+  }
+  
+  .footer {
+    padding-bottom: 100px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    flex: 0 0 300px;
+    padding: 20px;
+  }
+}
+
+/* ========== 手机竖屏 (480px) ========== */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 16px 50px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .hero-stats {
+    gap: 15px;
+  }
+
+  .stat-number,
+  .stat-suffix {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+    height: 65px;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+  }
+
+  .products,
+  .features,
+  .testimonials,
+  .faq,
+  .newsletter {
+    padding: 60px 16px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .product-icon {
+    font-size: 2.5rem;
+  }
+
+  .product-title {
+    font-size: 1.125rem;
+  }
+
+  .product-desc {
+    font-size: 0.875rem;
+  }
+
+  .product-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .product-price {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .feature-card p {
+    font-size: 0.875rem;
+  }
+
+  .testimonial-card {
+    flex: 0 0 280px;
+    padding: 15px;
+  }
+
+  .testimonial-rating {
+    font-size: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.875rem;
+  }
+
+  .faq-question {
+    font-size: 0.9375rem;
+    padding: 12px;
+  }
+
+  .faq-answer p {
+    font-size: 0.875rem;
+    padding: 0 12px 12px;
+  }
+
+  .newsletter-badge {
+    font-size: 2.5rem;
+  }
+
+  .newsletter-title {
+    font-size: 1.75rem;
+  }
+
+  .newsletter-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .footer {
+    padding: 60px 16px 90px;
+  }
+
+  .footer-logo {
+    font-size: 1.25rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.9375rem;
+  }
+
+  .footer-links h4 {
+    font-size: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9375rem;
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .lang-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .mobile-fixed-bar {
+    padding: 10px 16px;
+  }
+}
+
+/* 触摸优化 */
+@media (hover: none) and (pointer: coarse) {
+  .product-card:hover,
+  .feature-card:hover,
+  .testimonial-card:hover {
+    transform: none;
+  }
+  
+  .btn:hover,
+  .nav-links a:hover,
+  .footer-links a:hover,
+  .social-link:hover {
+    transform: none;
+  }
+}
+
+/* 表格响应式 */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  min-width: 600px;
+}
