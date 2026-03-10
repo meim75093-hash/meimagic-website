@@ -736,6 +736,7 @@ body:hover .mouse-glow {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: transform, opacity;
 }
 
 .scroll-reveal.active {
@@ -745,12 +746,29 @@ body:hover .mouse-glow {
 
 .btn-pulse {
     animation: pulse 2s infinite;
+    will-change: box-shadow;
 }
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
     70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
     100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+.mouse-glow {
+    will-change: transform;
+}
+
+.hero-particles {
+    will-change: transform;
+}
+
+.marquee-content {
+    will-change: transform;
+}
+
+.product-card, .feature-card, .testimonial-card, .faq-item {
+    will-change: transform;
 }
 
 @media (max-width: 1024px) {
