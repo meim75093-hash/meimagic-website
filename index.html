@@ -8,50 +8,136 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Mouse Follow Glow Effect -->
+    <div id="mouse-glow" class="mouse-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">MeiMagic</a>
+            <div class="nav-links">
+                <a href="#products">Products</a>
+                <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="nav-actions">
+                <button id="langToggle" class="lang-toggle">
+                    <span id="currentLang">🇺🇸 EN</span>
+                </button>
+                <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-nav">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-glow"></div>
+        <div class="container hero-container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span data-zh="全新模板已上线" data-en="New Templates Available">New Templates Available</span>
+                </div>
                 <h1 class="hero-title">
-                    <span class="brand-name">MeiMagic</span>
-                    <span class="tagline" data-zh="提升您的生产力" data-en="Transform Your Productivity">Transform Your Productivity</span>
+                    <span class="title-line">Transform Your</span>
+                    <span class="title-line gradient-text">Productivity</span>
+                    <span class="title-line">with MeiMagic</span>
                 </h1>
                 <p class="hero-subtitle" data-zh="专业的 Notion、Excel 和 Google Sheets 模板，精心设计，助您提升工作效率。" data-en="Professional templates for Notion, Excel & Google Sheets. Designed to streamline your workflow and boost efficiency.">Professional templates for Notion, Excel & Google Sheets. Designed to streamline your workflow and boost efficiency.</p>
                 <div class="hero-cta">
-                    <a href="#products" class="btn btn-primary" data-zh="浏览模板" data-en="Browse Templates">Browse Templates</a>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-secondary" data-zh="访问 Gumroad 店铺" data-en="Visit Gumroad Shop">Visit Gumroad Shop</a>
+                    <a href="#products" class="btn btn-primary btn-pulse">
+                        <span data-zh="浏览模板" data-en="Browse Templates">Browse Templates</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <span data-zh="访问 Gumroad 店铺" data-en="Visit Gumroad Shop">Visit Gumroad Shop</span>
+                    </a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-zh="10+" data-en="10+">10+</span>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-suffix">+</span>
                         <span class="stat-label" data-zh="模板" data-en="Templates">Templates</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number" data-zh="$8-20" data-en="$8-20">$8-20</span>
-                        <span class="stat-label" data-zh="价格范围" data-en="Price Range">Price Range</span>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label" data-zh="满意客户" data-en="Happy Customers">Happy Customers</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number" data-zh="即时" data-en="Instant">Instant</span>
-                        <span class="stat-label" data-zh="下载" data-en="Download">Download</span>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label" data-zh="即时下载" data-en="Instant Download">Instant Download</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-gradient"></div>
     </header>
+
+    <!-- Featured In Section -->
+    <section class="featured-in">
+        <div class="container">
+            <p class="featured-label" data-zh="受到认可" data-en="Featured In">Featured In</p>
+            <div class="featured-logos">
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 120 40" fill="currentColor">
+                        <text x="10" y="28" font-size="20" font-weight="bold">PRODUCT</text>
+                    </svg>
+                </div>
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 120 40" fill="currentColor">
+                        <text x="10" y="28" font-size="20" font-weight="bold">HACKER</text>
+                    </svg>
+                </div>
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 120 40" fill="currentColor">
+                        <text x="10" y="28" font-size="20" font-weight="bold">INDIE</text>
+                    </svg>
+                </div>
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 120 40" fill="currentColor">
+                        <text x="10" y="28" font-size="20" font-weight="bold">MAKER</text>
+                    </svg>
+                </div>
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 120 40" fill="currentColor">
+                        <text x="10" y="28" font-size="20" font-weight="bold">SAAS</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title" data-zh="我们的模板" data-en="Our Templates">Our Templates</h2>
-            <p class="section-subtitle" data-zh="精心打造的模板，提升您的生产力" data-en="Carefully crafted templates to elevate your productivity">Carefully crafted templates to elevate your productivity</p>
+            <div class="section-header">
+                <span class="section-tag" data-zh="产品" data-en="Products">Products</span>
+                <h2 class="section-title">
+                    <span class="gradient-text" data-zh="精心打造的模板" data-en="Carefully Crafted">Carefully Crafted</span>
+                    <span data-zh="提升生产力" data-en="Templates">Templates</span>
+                </h2>
+                <p class="section-subtitle" data-zh="精心打造的模板，提升您的生产力" data-en="Carefully crafted templates to elevate your productivity">Carefully crafted templates to elevate your productivity</p>
+            </div>
             
             <div class="products-grid">
                 <!-- Product Card 1 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">📊</div>
                     <h3 class="product-title" data-zh="财务追踪专业版" data-en="Finance Tracker Pro">Finance Tracker Pro</h3>
                     <p class="product-desc" data-zh="完整的个人财务管理，自动分类和可视化报表。" data-en="Complete personal finance management with automated categorization and visual reports.">Complete personal finance management with automated categorization and visual reports.</p>
@@ -59,24 +145,30 @@
                         <span class="tag">Excel</span>
                         <span class="tag" data-zh="谷歌表格" data-en="Google Sheets">Google Sheets</span>
                     </div>
-                    <div class="product-price">$12.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$12.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 2 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">📝</div>
                     <h3 class="product-title" data-zh="Notion 人生操作系统" data-en="Notion Life OS">Notion Life OS</h3>
                     <p class="product-desc" data-zh="一体化人生管理系统，整合目标、习惯、任务和笔记。" data-en="All-in-one life management system with goals, habits, tasks, and notes integration.">All-in-one life management system with goals, habits, tasks, and notes integration.</p>
                     <div class="product-tags">
                         <span class="tag">Notion</span>
                     </div>
-                    <div class="product-price">$15.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$15.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 3 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">📅</div>
                     <h3 class="product-title" data-zh="内容日历" data-en="Content Calendar">Content Calendar</h3>
                     <p class="product-desc" data-zh="规划、安排和追踪所有平台的社交媒体内容。" data-en="Plan, schedule, and track your social media content across all platforms.">Plan, schedule, and track your social media content across all platforms.</p>
@@ -84,48 +176,60 @@
                         <span class="tag">Notion</span>
                         <span class="tag">Excel</span>
                     </div>
-                    <div class="product-price">$9.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$9.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 4 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">🎯</div>
                     <h3 class="product-title" data-zh="目标追踪终极版" data-en="Goal Tracker Ultimate">Goal Tracker Ultimate</h3>
                     <p class="product-desc" data-zh="使用成熟的框架和进度可视化来设定、追踪和实现目标。" data-en="Set, track, and achieve your goals with proven frameworks and progress visualization.">Set, track, and achieve your goals with proven frameworks and progress visualization.</p>
                     <div class="product-tags">
                         <span class="tag">Notion</span>
                     </div>
-                    <div class="product-price">$11.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$11.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 5 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">💼</div>
                     <h3 class="product-title" data-zh="商业仪表盘" data-en="Business Dashboard">Business Dashboard</h3>
                     <p class="product-desc" data-zh="综合业务指标仪表盘，包含 KPI 追踪和分析。" data-en="Comprehensive business metrics dashboard with KPI tracking and analytics.">Comprehensive business metrics dashboard with KPI tracking and analytics.</p>
                     <div class="product-tags">
                         <span class="tag" data-zh="谷歌表格" data-en="Google Sheets">Google Sheets</span>
                     </div>
-                    <div class="product-price">$18.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$18.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 6 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">📚</div>
                     <h3 class="product-title" data-zh="学习计划" data-en="Study Planner">Study Planner</h3>
                     <p class="product-desc" data-zh="组织学习计划、笔记和作业的 comprehensive 系统。" data-en="Organize your study schedule, notes, and assignments with this comprehensive system.">Organize your study schedule, notes, and assignments with this comprehensive system.</p>
                     <div class="product-tags">
                         <span class="tag">Notion</span>
                     </div>
-                    <div class="product-price">$8.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$8.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 7 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">🏋️</div>
                     <h3 class="product-title" data-zh="健身追踪器" data-en="Fitness Tracker">Fitness Tracker</h3>
                     <p class="product-desc" data-zh="追踪锻炼、营养和健身目标进度。" data-en="Track workouts, nutrition, and progress towards your fitness goals.">Track workouts, nutrition, and progress towards your fitness goals.</p>
@@ -133,36 +237,45 @@
                         <span class="tag">Excel</span>
                         <span class="tag" data-zh="谷歌表格" data-en="Google Sheets">Google Sheets</span>
                     </div>
-                    <div class="product-price">$10.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$10.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 8 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">📖</div>
                     <h3 class="product-title" data-zh="阅读清单管理" data-en="Reading List Manager">Reading List Manager</h3>
                     <p class="product-desc" data-zh="组织阅读清单、追踪进度和记录关键见解。" data-en="Organize your reading list, track progress, and capture key insights.">Organize your reading list, track progress, and capture key insights.</p>
                     <div class="product-tags">
                         <span class="tag">Notion</span>
                     </div>
-                    <div class="product-price">$7.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$7.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 9 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">🎨</div>
                     <h3 class="product-title" data-zh="创意项目中心" data-en="Creative Project Hub">Creative Project Hub</h3>
                     <p class="product-desc" data-zh="使用可视化看板管理创意项目，从构思到完成。" data-en="Manage creative projects from ideation to completion with visual boards.">Manage creative projects from ideation to completion with visual boards.</p>
                     <div class="product-tags">
                         <span class="tag">Notion</span>
                     </div>
-                    <div class="product-price">$13.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    <div class="product-footer">
+                        <span class="product-price">$13.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
+                    </div>
                 </div>
 
                 <!-- Product Card 10 -->
-                <div class="product-card">
+                <div class="product-card scroll-reveal">
+                    <div class="card-glow"></div>
                     <div class="product-icon">📈</div>
                     <h3 class="product-title" data-zh="投资组合追踪" data-en="Investment Portfolio">Investment Portfolio</h3>
                     <p class="product-desc" data-zh="追踪投资、分析表现和规划财务未来。" data-en="Track investments, analyze performance, and plan your financial future.">Track investments, analyze performance, and plan your financial future.</p>
@@ -170,72 +283,176 @@
                         <span class="tag">Excel</span>
                         <span class="tag" data-zh="谷歌表格" data-en="Google Sheets">Google Sheets</span>
                     </div>
-                    <div class="product-price">$16.99</div>
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title" data-zh="关于 MeiMagic" data-en="About MeiMagic">About MeiMagic</h2>
-                <p class="about-text" data-zh="你好！我是 MeiMagic 的创始人。我相信合适的工具可以改变我们的工作生活方式。每个模板都基于真实使用场景和生产力原则精心设计。" data-en="Hi! I'm the creator behind MeiMagic. I believe that the right tools can transform how we work and live. Each template is carefully designed based on real-world use cases and productivity principles.">Hi! I'm the creator behind MeiMagic. I believe that the right tools can transform how we work and live. Each template is carefully designed based on real-world use cases and productivity principles.</p>
-                <p class="about-text" data-zh="我的使命是帮助您节省时间、保持专注、专注于真正重要的事情。无论您是学生、职场人士还是创业者，这里都有适合您的模板。" data-en="My mission is to help you save time, stay organized, and focus on what truly matters. Whether you're a student, professional, or entrepreneur, there's a template here for you.">My mission is to help you save time, stay organized, and focus on what truly matters. Whether you're a student, professional, or entrepreneur, there's a template here for you.</p>
-                <div class="about-highlights">
-                    <div class="highlight">
-                        <span class="highlight-icon">✨</span>
-                        <span data-zh="专业设计" data-en="Professionally Designed">Professionally Designed</span>
-                    </div>
-                    <div class="highlight">
-                        <span class="highlight-icon">🚀</span>
-                        <span data-zh="即时下载" data-en="Instant Download">Instant Download</span>
-                    </div>
-                    <div class="highlight">
-                        <span class="highlight-icon">💡</span>
-                        <span data-zh="定期更新" data-en="Regular Updates">Regular Updates</span>
-                    </div>
-                    <div class="highlight">
-                        <span class="highlight-icon">📧</span>
-                        <span data-zh="邮件支持" data-en="Email Support">Email Support</span>
+                    <div class="product-footer">
+                        <span class="product-price">$16.99</span>
+                        <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" class="btn btn-product" data-zh="获取模板" data-en="Get Template">Get Template</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Section -->
-    <section class="social">
+    <!-- Features Section -->
+    <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title" data-zh="关注我" data-en="Connect With Me">Connect With Me</h2>
-            <p class="section-subtitle" data-zh="关注获取技巧、更新和独家优惠" data-en="Follow for tips, updates, and exclusive offers">Follow for tips, updates, and exclusive offers</p>
-            <div class="social-links">
-                <a href="https://x.com/meiMei189561" target="_blank" rel="noopener" class="social-link">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                    <span>X (Twitter)</span>
-                </a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-link">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.24-1.72 1.39-3.92 1.98-6.09 1.69-2.17-.29-4.16-1.42-5.46-3.14-1.32-1.75-1.84-4.03-1.43-6.21.41-2.18 1.73-4.09 3.62-5.24 1.89-1.15 4.2-1.35 6.26-.55v4.09c-.95-.52-2.08-.65-3.13-.36-1.05.29-1.94.98-2.46 1.92-.52.94-.63 2.06-.31 3.08.32 1.02 1.04 1.87 2.01 2.34.97.47 2.09.52 3.1.14 1.01-.38 1.82-1.16 2.26-2.14.27-.61.41-1.28.41-1.95V.02h-3.91z"/>
-                    </svg>
-                    <span data-zh="抖音" data-en="TikTok">TikTok</span>
-                </a>
-                <a href="https://xiaohongshu.com" target="_blank" rel="noopener" class="social-link">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                    </svg>
-                    <span data-zh="小红书" data-en="小红书">小红书</span>
-                </a>
-                <a href="https://reddit.com" target="_blank" rel="noopener" class="social-link">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-.056-.056a1.25 1.25 0 0 1 1.249-1.249zm-7.566 2.055c.422-.421 1.005-.687 1.646-.687 1.227 0 2.222.995 2.222 2.222 0 .641-.266 1.224-.688 1.646.266.529.422 1.112.422 1.727 0 2.37-2.153 4.295-4.805 4.295-2.652 0-4.805-1.925-4.805-4.295 0-.615.156-1.198.422-1.727-.422-.422-.688-1.005-.688-1.646 0-1.227.995-2.222 2.222-2.222.641 0 1.224.266 1.646.688zM12 8.25c-.422 0-.816.084-1.176.234.234-.562.703-.984 1.176-.984.473 0 .942.422 1.176.984-.36-.15-.754-.234-1.176-.234zm0 2.25c-1.243 0-2.25 1.007-2.25 2.25s1.007 2.25 2.25 2.25 2.25-1.007 2.25-2.25-1.007-2.25-2.25-2.25zm0 6.75c-2.078 0-3.906-.984-5.078-2.531.281-.656.844-1.125 1.5-1.406.141.094.281.187.422.281.844.563 1.875.89 2.953.89 1.078 0 2.109-.327 2.953-.89.141-.094.281-.187.422-.281.656.281 1.219.75 1.5 1.406-1.172 1.547-3 2.531-5.078 2.531z"/>
-                    </svg>
-                    <span>Reddit</span>
-                </a>
+            <div class="section-header">
+                <span class="section-tag" data-zh="优势" data-en="Why Us">Why Us</span>
+                <h2 class="section-title">
+                    <span data-zh="为什么选择" data-en="Why Choose">Why Choose</span>
+                    <span class="gradient-text" data-zh="MeiMagic" data-en="MeiMagic">MeiMagic</span>
+                </h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">✨</div>
+                    <h3 data-zh="专业设计" data-en="Professional Design">Professional Design</h3>
+                    <p data-zh="每个模板都经过精心设计，美观且实用" data-en="Every template is meticulously designed for beauty and functionality">Every template is meticulously designed for beauty and functionality</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">🚀</div>
+                    <h3 data-zh="即时使用" data-en="Instant Access">Instant Access</h3>
+                    <p data-zh="购买后立即下载，马上开始使用" data-en="Download immediately after purchase and start using right away">Download immediately after purchase and start using right away</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">💡</div>
+                    <h3 data-zh="持续更新" data-en="Regular Updates">Regular Updates</h3>
+                    <p data-zh="免费获得所有未来更新和改进" data-en="Get all future updates and improvements for free">Get all future updates and improvements for free</p>
+                </div>
+                <div class="feature-card scroll-reveal">
+                    <div class="feature-icon">📧</div>
+                    <h3 data-zh="专属支持" data-en="Dedicated Support">Dedicated Support</h3>
+                    <p data-zh="有任何问题？我们随时为您提供帮助" data-en="Have questions? We're here to help you anytime">Have questions? We're here to help you anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="评价" data-en="Testimonials">Testimonials</span>
+                <h2 class="section-title">
+                    <span data-zh="用户怎么说" data-en="What Users Say">What Users Say</span>
+                </h2>
+            </div>
+            <div class="testimonials-marquee">
+                <div class="marquee-content">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"这些模板彻底改变了我的工作方式。Notion Life OS 太棒了！"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sarah Chen</span>
+                            <span class="author-role">Freelance Designer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Finance Tracker Pro 帮我理清了所有财务状况。物超所值！"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Mike Johnson</span>
+                            <span class="author-role">Entrepreneur</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"作为学生，Study Planner 是我的救命稻草。强烈推荐！"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Emma Liu</span>
+                            <span class="author-role">Graduate Student</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Content Calendar 让我的社交媒体管理变得轻松简单。"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Alex Park</span>
+                            <span class="author-role">Content Creator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="常见问题" data-en="FAQ">FAQ</span>
+                <h2 class="section-title">
+                    <span data-zh="常见问题" data-en="Frequently Asked">Frequently Asked</span>
+                    <span class="gradient-text" data-zh="问题" data-en="Questions">Questions</span>
+                </h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span data-zh="购买后如何获取模板？" data-en="How do I receive the templates after purchase?">How do I receive the templates after purchase?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-zh="购买后您会立即收到 Gumroad 的邮件，包含下载链接。所有模板都是即时可用的数字文件。" data-en="You'll receive an email from Gumroad immediately after purchase with download links. All templates are instantly accessible digital files.">You'll receive an email from Gumroad immediately after purchase with download links. All templates are instantly accessible digital files.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span data-zh="可以退款吗？" data-en="Can I get a refund?">Can I get a refund?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-zh="由于是数字产品，我们不提供退款。但如有任何问题，请随时联系我们，我们会尽力帮助您。" data-en="Due to the digital nature of our products, we don't offer refunds. However, if you have any issues, please contact us and we'll do our best to help.">Due to the digital nature of our products, we don't offer refunds. However, if you have any issues, please contact us and we'll do our best to help.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span data-zh="模板可以更新吗？" data-en="Do the templates get updated?">Do the templates get updated?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-zh="是的！购买后您将获得所有未来的免费更新。我们会不断改进模板。" data-en="Yes! You'll get all future updates for free after purchase. We continuously improve our templates.">Yes! You'll get all future updates for free after purchase. We continuously improve our templates.</p>
+                    </div>
+                </div>
+                <div class="faq-item scroll-reveal">
+                    <button class="faq-question">
+                        <span data-zh="支持哪些平台？" data-en="Which platforms are supported?">Which platforms are supported?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-zh="我们支持 Notion、Excel 和 Google Sheets。每个产品页面都会标明适用的平台。" data-en="We support Notion, Excel, and Google Sheets. Each product page indicates which platforms it's compatible with.">We support Notion, Excel, and Google Sheets. Each product page indicates which platforms it's compatible with.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content scroll-reveal">
+                <div class="newsletter-badge">📬</div>
+                <h2 class="newsletter-title">
+                    <span class="gradient-text" data-zh="获取独家优惠" data-en="Get Exclusive">Get Exclusive</span>
+                    <span data-zh="和更新" data-en="Offers & Updates">Offers & Updates</span>
+                </h2>
+                <p class="newsletter-subtitle" data-zh="订阅我们的通讯，获取新产品通知、独家折扣和生产力技巧。" data-en="Subscribe to our newsletter for new product announcements, exclusive discounts, and productivity tips.">Subscribe to our newsletter for new product announcements, exclusive discounts, and productivity tips.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="your@email.com" required>
+                        <button type="submit" class="btn btn-primary btn-pulse">
+                            <span data-zh="订阅" data-en="Subscribe">Subscribe</span>
+                        </button>
+                    </div>
+                    <p class="form-note" data-zh="我们尊重您的隐私，绝不发送垃圾邮件。" data-en="We respect your privacy. No spam, ever.">We respect your privacy. No spam, ever.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -243,14 +460,41 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>MeiMagic</h3>
+                    <h3 class="footer-logo">MeiMagic</h3>
                     <p data-zh="为现代创作者打造的生产力模板" data-en="Productivity templates for modern creators">Productivity templates for modern creators</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/meiMei189561" target="_blank" rel="noopener" class="social-link" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v6.16c0 2.52-1.12 4.84-2.9 6.24-1.72 1.39-3.92 1.98-6.09 1.69-2.17-.29-4.16-1.42-5.46-3.14-1.32-1.75-1.84-4.03-1.43-6.21.41-2.18 1.73-4.09 3.62-5.24 1.89-1.15 4.2-1.35 6.26-.55v4.09c-.95-.52-2.08-.65-3.13-.36-1.05.29-1.94.98-2.46 1.92-.52.94-.63 2.06-.31 3.08.32 1.02 1.04 1.87 2.01 2.34.97.47 2.09.52 3.1.14 1.01-.38 1.82-1.16 2.26-2.14.27-.61.41-1.28.41-1.95V.02h-3.91z"/></svg>
+                        </a>
+                        <a href="https://xiaohongshu.com" target="_blank" rel="noopener" class="social-link" aria-label="小红书">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                        </a>
+                        <a href="https://reddit.com" target="_blank" rel="noopener" class="social-link" aria-label="Reddit">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-.056-.056a1.25 1.25 0 0 1 1.249-1.249zm-7.566 2.055c.422-.421 1.005-.687 1.646-.687 1.227 0 2.222.995 2.222 2.222 0 .641-.266 1.224-.688 1.646.266.529.422 1.112.422 1.727 0 2.37-2.153 4.295-4.805 4.295-2.652 0-4.805-1.925-4.805-4.295 0-.615.156-1.198.422-1.727-.422-.422-.688-1.005-.688-1.646 0-1.227.995-2.222 2.222-2.222.641 0 1.224.266 1.646.688zM12 8.25c-.422 0-.816.084-1.176.234.234-.562.703-.984 1.176-.984.473 0 .942.422 1.176.984-.36-.15-.754-.234-1.176-.234zm0 2.25c-1.243 0-2.25 1.007-2.25 2.25s1.007 2.25 2.25 2.25 2.25-1.007 2.25-2.25-1.007-2.25-2.25-2.25zm0 6.75c-2.078 0-3.906-.984-5.078-2.531.281-.656.844-1.125 1.5-1.406.141.094.281.187.422.281.844.563 1.875.89 2.953.89 1.078 0 2.109-.327 2.953-.89.141-.094.281-.187.422-.281.656.281 1.219.75 1.5 1.406-1.172 1.547-3 2.531-5.078 2.531z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener" data-zh="Gumroad 店铺" data-en="Gumroad Shop">Gumroad Shop</a>
+                    <h4 data-zh="产品" data-en="Products">Products</h4>
+                    <a href="#products">All Templates</a>
+                    <a href="https://meimagic.gumroad.com" target="_blank" rel="noopener">Gumroad Shop</a>
+                    <a href="#features">Features</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-zh="公司" data-en="Company">Company</h4>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#faq">FAQ</a>
                     <a href="mailto:contact@meimagic.com" data-zh="联系我" data-en="Contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4 data-zh="法律" data-en="Legal">Legal</h4>
+                    <a href="#" data-zh="隐私政策" data-en="Privacy Policy">Privacy Policy</a>
+                    <a href="#" data-zh="服务条款" data-en="Terms of Service">Terms of Service</a>
                 </div>
             </div>
             <div class="footer-bottom">
