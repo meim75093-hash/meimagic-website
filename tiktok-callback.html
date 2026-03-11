@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Shop OAuth Callback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff0050;
+            text-align: center;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .code {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✅ TikTok Shop 授权成功！</h1>
+        <p class="success">授权码已接收，正在处理中...</p>
+        <div id="codeDisplay" class="code"></div>
+        <p>请勿关闭此页面，系统正在自动处理授权。</p>
+    </div>
+
+    <script>
+        // 获取 URL 参数中的 code
+        const urlParams = new URLSearchParams(window.location.search);
+        const authCode = urlParams.get('code');
+        const state = urlParams.get('state');
+        
+        if (authCode) {
+            document.getElementById('codeDisplay').textContent = '授权码: ' + authCode;
+            
+            // 这里可以发送到后端处理（在实际应用中）
+            // fetch('/api/tiktok/process-auth', {
+            //     method: 'POST',
+            //     headers: {'Content-Type': 'application/json'},
+            //     body: JSON.stringify({code: authCode, state: state})
+            // });
+        } else {
+            document.getElementById('codeDisplay').textContent = '未收到授权码';
+        }
+    </script>
+</body>
+</html>
