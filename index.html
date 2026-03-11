@@ -481,5 +481,19 @@
         </a>
     </div>
     <script src="script.js" defer></script>
+    <script>
+        // Handle TikTok OAuth callback
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('code') && window.location.pathname === '/') {
+            // Create a hidden div to show the callback result
+            const callbackDiv = document.createElement('div');
+            callbackDiv.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; background: #4ade80; color: white; padding: 20px; text-align: center; z-index: 10000;';
+            callbackDiv.innerHTML = '<h3>✅ TikTok Shop Authorization Successful!</h3><p>Authorization code received. Please copy this code and provide it to your application:</p><div style="background: rgba(0,0,0,0.2); padding: 10px; margin: 10px; border-radius: 5px; word-break: break-all;">' + urlParams.get('code') + '</div>';
+            document.body.appendChild(callbackDiv);
+            
+            // Also log to console for easy copying
+            console.log('TikTok OAuth Code:', urlParams.get('code'));
+        }
+    </script>
 </body>
 </html>
